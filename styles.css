@@ -15,20 +15,29 @@ body {
 }
 
 #location-info {
-    position: fixed;
-    top: 20px;
-    left: 30px;
+    /* position: fixed; */
+    padding: 0px 32px;
+    display: flex;
+    gap: 40px;
+    /* top: 20px;
+    left: 30px; */
     font-size: 16px;
     font-weight: normal;
     letter-spacing: 0.5px;
     z-index: 1000;
     color: #fff;
-    display: flex;
-    gap: 40px;
+    background-color: #202020;
 }
 
+.landing_background {
+    background-color: #202020;
+    color: #202020
+}
 .info-item {
-    white-space: nowrap;
+ white-space: nowrap;
+ 
+ 
+
 }
 
 .moon-image {
@@ -123,30 +132,72 @@ body {
     position: absolute;
 }
 
+.left-text {
+    position: absolute;
+    right: 1440px;
+    background-color: #202020;
+
+}
+.nav-item{
+    color: #fff;
+}
 nav {
     position: fixed;
-    top: 20px;
-    right: 30px;
-    width: auto;
-    display: flex;
-    align-items: center;
-    padding: 0;
+    top: 0px;
+    left: 0px;
+    right: 00px;
+    /* width: auto; */
+    /* display: flex; */
+    /* align-items: center; */
     z-index: 1000;
     font-size: 16px;
+    box-sizing: border-box;
+    background-color: #202020;
+    padding: 20px 0;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 32px;
     gap: 30px;
+    
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #202020;
+    
+}
+
+.scroll_star {
+    position: absolute;
+    top: 830px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.scroll_text {
+    position: absolute;
+    top: 820px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    z-index: 1000;
 }
 
 .landing_about {
@@ -309,7 +360,8 @@ nav a {
 .to_top_button {
     position: absolute;
     bottom: 360px;
-    right: 750px;
+    right: 50%;
+    transform: translateX(50%);
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
@@ -325,7 +377,53 @@ footer {
     background-color: #202020;
     padding: 40px 32px;
     box-sizing: border-box;
-    color: #eb0202;
+    color: #ffffff;
+}
+
+.footer_left {
+    position: absolute;
+    bottom: 200px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.footer_right {
+    position: absolute;
+    bottom: 200px;
+    right: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.footer_social, .footer_email {
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.footer_social:hover, .footer_email:hover {
+    color: #97B074;
+}
+
+.copyright {
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+    text-align: right;
+    text-transform: uppercase;
+    bottom: 0;
+    display: block;
 }
 
 .corner_logo {

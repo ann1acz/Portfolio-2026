@@ -8,20 +8,25 @@
     <style>@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');</style>
 </head>
 <body>
-    <div id="location-info">
-        <span class="info-item">• AARHUS, DK</span>
-        <span class="info-item"><span id="time">9:27 PM</span></span>
-        <span class="info-item">56.15327° N, 10.20250° E</span>
-    </div>
-    <nav>
-        <ul>
-            <li class="nav-item"><a href="#home">HOME</a></li>
-            <li class="nav-item"><a href="#about">ABOUT</a></li>
-            <li class="nav-item"><a href="#projects" onclick="window.scrollTo({ top: 1955, behavior: 'smooth' });">WORKS</a></li>
-            <li class="nav-item"><a href="#gallery">GALLERY</a></li>
-            <li class="nav-item-2"><a href="#contact">LET'S CONNNECT</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <div class="navbar">
+                <div id="location-info">
+                    <span class="info-item">• AARHUS, DK</span>
+                    <span class="info-item"><span id="time">9:27 PM</span></span>
+                    <span class="info-item">56.15327° N, 10.20250° E</span>
+                </div>
+                <ul>
+                        <!--<li class="nav-item">• AARHUS, DK</li>
+                        <li class="nav-item"><span id="time">9:27 PM</span></li>
+                        <li class="nav-item">56.15327° N, 10.20250° E</li>-->
+                        <li class="nav-item"><a href="#home">HOME</a></li>
+                        <li class="nav-item"><a href="#about">ABOUT</a></li>
+                        <li class="nav-item"><a href="#projects" onclick="window.scrollTo({ top: 1955, behavior: 'smooth' });">WORKS</a></li>
+                        <li class="nav-item"><a href="#gallery">GALLERY</a></li>
+                        <li class="nav-item-2"><a href="#contact">LET'S CONNNECT</a></li>
+                </ul>
+            </div>
+        </nav>
     <header>
         <h3 class="header_landing_3">A UNIVERSE OF THOUGHTFUL DESIGN</h3>
         <img src="assets/pictures/moon_1.png" alt="Moon" class="moon-image">
@@ -36,7 +41,8 @@
         <h2 class="header_side">CREATIVE PORTFOLIO</h2>
     </header>
 
-
+    <img src="assets/pictures/scroll_star.png" alt="scroll star" class="scroll_star">
+    <h2 class="scroll_text">SCROLL TO EXPLORE</h2>
     <img src="assets/pictures/corner_logo.svg" alt="corner logo" class="corner_logo">
 
     <div>
@@ -68,6 +74,7 @@
     </div>
 
     <div class="landing_gallery">
+        <img src="assets/pictures/star_gallery.png" alt="Gallery Star" class="gallery_star">
         <h4 class="landing_gallery_text">GALLERY</h4>
         <div class="gallery_carousel_wrapper" onclick="window.location.href='gallery.html'" style="cursor: pointer;">
             <div class="gallery_carousel_track">
@@ -153,9 +160,18 @@
     </script>
 
     <footer>
-        <span>footer text HELLO</span>
         <span class="to_top_button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">BACK TO
             THE TOP</span>
+        <div class="footer_left">
+            <span>follow</span>
+            <span class="footer_social" onclick="window.open('https://www.instagram.com/annaczochara/', '_blank')">INSTAGRAM</span>
+            <span class="footer_social" onclick="window.open('https://www.linkedin.com/in/anna-czochara-1a0b3b1b9/', '_blank')">LINKEDIN</span>
+        </div>
+        <div class="footer_right">
+            <span>contact</span>
+            <span class="footer_email" onclick="window.location.href='mailto:example@example.com';">ann1a.czochara@gmail.com</span>
+        </div>
+        <span class="copyright">© 2026 <br> all rights reserved</span>
     </footer>
 
 </body>

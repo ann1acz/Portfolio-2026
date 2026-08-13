@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica neue, helvetica, sans-serif;
+    background-image: url('assets/pictures/blasol_background.png');
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 5430px;
+    width: 100vw;
+    overflow-x: hidden;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32"><text x="16" y="24" font-size="24" fill="white" stroke="%23202020" stroke-width="0.5" text-anchor="middle">✶</text></svg>') 16 16, auto;
+}
+
+#location-info {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    z-index: 1000;
+    color: #fff;
+    display: flex;
+    gap: 40px;
+}
+
+.info-item {
+    white-space: nowrap;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    z-index: 1000;
+    font-size: 16px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.sparkle {
+    position: fixed;
+    pointer-events: none;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    animation: sparkleAnimation 1s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) scale(0);
+    }
+}

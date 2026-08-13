@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Czochara</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');</style>
+</head>
+<body>
+    <div id="location-info">
+        <span class="info-item">• AARHUS, DK</span>
+        <span class="info-item"><span id="time">9:27 PM</span></span>
+        <span class="info-item">56.15327° N, 10.20250° E</span>
+    </div>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="#home">HOME</a></li>
+            <li class="nav-item"><a href="#about">ABOUT</a></li>
+            <li class="nav-item"><a href="#projects" onclick="window.scrollTo({ top: 1955, behavior: 'smooth' });">WORKS</a></li>
+            <li class="nav-item"><a href="#gallery">GALLERY</a></li>
+            <li class="nav-item-2"><a href="#contact">LET'S CONNNECT</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h3 class="header_landing_3">A UNIVERSE OF THOUGHTFUL DESIGN</h3>
+        <img src="assets/pictures/moon_1.png" alt="Moon" class="moon-image">
+        <div class="moon-circle"></div>
+        <div class="eyebrow"> 
+            <h2 class="header_eyebrow">UI/UX DESIGN</h2>
+            <h2 class="header_eyebrow">ILLUSTRATION</h2>
+            <h2 class="header_eyebrow">GRAPHIC DESIGN</h2>
+        </div>
+            <h1 class="header_landing_1">ANNA CZO</h1>
+        <h1 class="header_landing_2">CHARA</h1>
+        <h2 class="header_side">CREATIVE PORTFOLIO</h2>
+    </header>
+
+
+    <img src="assets/pictures/corner_logo.svg" alt="corner logo" class="corner_logo">
+
+    <div>
+        <img src="assets/pictures/stars_landing_about.png" alt="Stars" class="stars_landing_about">
+        <h4 class="landing_about">A designer with a soft spot for playful, a bit quirky and     definitively functional designs.</h4>
+        <button class="about_button" onclick="window.location.href='about.html'">FIND OUT MORE</button>
+    </div>
+
+    <div class="landing_projects" id="projects">
+        <h4 class="landing_projects_text">FEATURED PROJECTS</h4>
+        <div class="project_cards">
+            <div class="project_cards_top_row">
+                <div class="project_card_bluefin" onclick="window.location.href='bluefin.html'">
+                    <img src="assets/pictures/bluefin_card.png" alt="Project 1" class="project_image">
+                    <h5 class="project_title">Bluefin</h5>
+                    <p class="project_description"></p>
+                </div>
+                <div class="project_card_hiddenplaces" onclick="window.location.href='project2.html'">
+                    <img src="assets/pictures/hiddenplaces_card.png" alt="Project 2" class="project_image">
+                    <h5 class="project_title">Hidden Places</h5>
+                </div>
+            </div>
+            <div class="project_card_blasol" onclick="window.location.href='blasol_page.html'">
+                <img src="assets/pictures/blasol_card.png" alt="Project 3" class="project_image project_image_blasol">
+                <h5 class="project_title">Blasol - Festival app design concept</h5>
+                <p class="project_description">A festival companion app designed to make navigating BLÅ SOL easier and help festival-goers stay connected with friends. The app combines an interactive map, live information and personalised schedules.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="landing_gallery">
+        <h4 class="landing_gallery_text">GALLERY</h4>
+        <div class="gallery_carousel_wrapper" onclick="window.location.href='gallery.html'" style="cursor: pointer;">
+            <div class="gallery_carousel_track">
+                <img src="assets/pictures/violin.png" alt="Gallery 1" class="gallery_image">
+                <img src="assets/pictures/wazne_poster.png" alt="Gallery 2" class="gallery_image">
+                <img src="assets/pictures/ac.png" alt="Gallery 3" class="gallery_image">
+                <img src="assets/pictures/pixel_glass.png" alt="Gallery 4" class="gallery_image">
+                <img src="assets/pictures/wygodnie_poster.png" alt="Gallery 5" class="gallery_image">
+                <img src="assets/pictures/variable_fonts_gif.gif" alt="Gallery 6" class="gallery_image">
+                <img src="assets/pictures/compozition.png" alt="Gallery 7" class="gallery_image">
+                <img src="assets/pictures/landscape_painting.png" alt="Gallery 8" class="gallery_image">
+                <img src="assets/pictures/violin.png" alt="Gallery 1" class="gallery_image">
+                <img src="assets/pictures/wazne_poster.png" alt="Gallery 2" class="gallery_image">
+                <img src="assets/pictures/ac.png" alt="Gallery 3" class="gallery_image">
+                <img src="assets/pictures/pixel_glass.png" alt="Gallery 4" class="gallery_image">
+                <img src="assets/pictures/wygodnie_poster.png" alt="Gallery 5" class="gallery_image">
+                <img src="assets/pictures/variable_fonts_gif.gif" alt="Gallery 6" class="gallery_image">
+                <img src="assets/pictures/compozition.png" alt="Gallery 7" class="gallery_image">
+                <img src="assets/pictures/landscape_painting.png" alt="Gallery 8" class="gallery_image">
+            </div>
+        </div>
+    </div>
+    <script>
+        // Moon hover effect with dissolve
+        const moonImage = document.querySelector('.moon-image');
+        moonImage.addEventListener('mouseover', function() {
+            this.classList.add('dissolve');
+            setTimeout(() => {
+                this.src = 'assets/pictures/moon_2.png';
+                this.classList.remove('dissolve');
+            }, 250);
+        });
+        moonImage.addEventListener('mouseout', function() {
+            this.classList.add('dissolve');
+            setTimeout(() => {
+                this.src = 'assets/pictures/moon_1.png';
+                this.classList.remove('dissolve');
+            }, 250);
+        });
+        
+        function updateTime() {
+            const now = new Date();
+            const aarhusTime = new Intl.DateTimeFormat('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true,
+                timeZone: 'Europe/Copenhagen'
+            }).format(now);
+            
+            document.getElementById('time').textContent = aarhusTime;
+        }
+        
+        // Update time immediately
+        updateTime();
+        
+        // Update every second
+        setInterval(updateTime, 1000);
+        
+        // Sparkle cursor effect
+        const sparkleColors = ['#4B699F', '#7A6F9F', '#97B074', '#C96548', '#EBD792'];
+        document.addEventListener('mousemove', (e) => {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            
+            const randomX = (Math.random() - 0.5) * 100;
+            const randomY = (Math.random() - 0.5) * 100;
+            const randomColor = sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
+            
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.setProperty('--tx', randomX + 'px');
+            sparkle.style.setProperty('--ty', randomY + 'px');
+            sparkle.style.width = '8px';
+            sparkle.style.height = '8px';
+            sparkle.style.backgroundColor = randomColor;
+            sparkle.style.borderRadius = '50%';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 600);
+        });
+    </script>
+
+    <footer>
+        <span>footer text HELLO</span>
+        <span class="to_top_button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">BACK TO
+            THE TOP</span>
+    </footer>
+
+</body>
+</html>

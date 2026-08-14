@@ -4,25 +4,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="blasol.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');</style>
+    <link rel="icon" href="assets/pictures/corner_logo.svg">
     <title>Bla Sol Festival App</title>
 </head>
 <body>
-    <div id="location-info">
-        <span class="info-item">• AARHUS, DK</span>
-        <span class="info-item"><span id="time">9:27 PM</span></span>
-        <span class="info-item">56.15327° N, 10.20250° E</span>
-    </div>
     <nav>
-        <ul>
-            <li class="nav-item"><a href="#home">HOME</a></li>
-            <li class="nav-item"><a href="#about">ABOUT</a></li>
-            <li class="nav-item"><a href="landing_page.html#projects">WORKS</a></li>
-            <li class="nav-item"><a href="#gallery">GALLERY</a></li>
-            <li class="nav-item-2"><a href="#contact">LET'S CONNNECT</a></li>
-        </ul>
+        <div class="navbar">
+            <div id="location-info">
+                <span class="info-item">• AARHUS, DK</span>
+                <span class="info-item"><span id="time">9:27 PM</span></span>
+                <span class="info-item">56.15327° N, 10.20250° E</span>
+            </div>
+                <ul>
+                        <!--<li class="nav-item">• AARHUS, DK</li>
+                        <li class="nav-item"><span id="time">9:27 PM</span></li>
+                        <li class="nav-item">56.15327° N, 10.20250° E</li>-->
+                        <li class="nav-item"><a href="landing_page.html">HOME</a></li>
+                        <li class="nav-item"><a href="about_page.html">ABOUT</a></li>
+                        <!--<li class="nav-item"><a href="landing_page.html" onclick="window.scrollTo({ top: 1955, behavior: 'smooth' });">WORKS</a></li>-->
+                        <li class="nav-item"><a href="landing_page.html#scroll-1955">WORKS</a></li>
+
+                        <li class="nav-item"><a href="gallery_page.html">GALLERY</a></li>
+                        <li class="nav-item-2"><a href="mailto:ann1a.czochara@gmail.com">LET'S CONNECT</a></li>
+                </ul>
+        </div>
     </nav>
-    <header>
-        <h1 class="header_landing_1">BLÅ SOL</h1>
+    <header class="blasol_header">
+        <div class="blasol_header_intro">
+            <h1 class="header_landing_1">BLÅSOL</h1>
+            <img src="assets/pictures/blasol_header_stars1.png" alt="blasol stars" class="blasol_header_stars">
+            <div class="blasol_roles">
+                <span class="role_label">ROLE</span>
+                <span class="role_pill role_research">USER RESEARCH</span>
+                <span class="role_pill role_design">DESIGN</span>
+                <span class="role_pill role_frontend">FRONT-END</span>
+            </div>
+        </div>
+        <p class="blasol_process">LEARN ABOUT MY CREATIVE PROCESS</p>
+        <img src="assets/pictures/blasol_header_star2.png" alt="blasol stars" class="blasol_header_stars2">
+        <div class="blasol_header_meta">
+            <div>
+                <span class="meta_label">TOOLS</span>
+                <span>Figma, Procreate, React</span>
+            </div>
+            <div>
+                <span class="meta_label">TEAM</span>
+                <span>Team of 4</span>
+            </div>
+            <div>
+                <span class="meta_label">DATE</span>
+                <span>2026</span>
+            </div>
+        </div>
     </header>
+    <section class="Project_overview">
+        <img src="assets/pictures/blasolApp_map_overview.png" alt="blasol App" class="overview_phone">
+        <div class="overview_text">
+            <h2>PROJECT OVERVIEW</h2>
+            <p>
+                A mobile app concept designed to help festival-goers navigate BLÅ SOL,
+                keep track of performances and stay connected with their friends.
+            </p>
+        </div>
+    </section>
+    <section class="project_challenge">
+        <h2>THE CHALLENGE</h2>
+        <img src="assets/pictures/ChallengeStar.png" alt="blasol challenge star" class="challenge_star">
+        <p>
+            Festivals can be exciting, but they can also be overwhelming. With large crowds,
+            multiple stages, changing schedules and people constantly moving around, it can be
+            difficult to find your friends, know where to go or keep track of what is happening.
+        </p>
+        <p>
+            How can our team help BLÅ SOL to ensure that people are aware of the location of
+            crowded areas, friends and events throughout the festival, in order for them to have
+            a more enjoyable experience?
+        </p>
+    </section>
+    <section class="design_process">
+        <h2>DESIGN PROCESS</h2>
+        <div class="process_visual">
+            <img src="assets/pictures/designprocess_blasol.png" alt="blasol process design Process(discover Define Develop Deliver)" class="blasol_process_img">
+            <div class="process_labels" aria-hidden="true">
+                <span>DISCOVER</span>
+                <span>DEFINE</span>
+                <span>DEVELOP</span>
+                <span>DELIVER</span>
+            </div>
+        </div>
+    </section>
+    <section class="discover">
+        <div class="discover_intro">
+            <h2>DISCOVER</h2>
+            <div class="discover_text">
+                <p>
+                    We started by researching BLÅ SOL and the wider festival experience, looking at how people currently navigate festivals, find information and plan their day.
+                </p>
+                <p>
+                    We also interviewed festival-goers about their experiences. A few patterns stood out: people often use their phones for navigation and schedules, attend with friends, and need quick access to information rather than long interactions.
+                </p>
+                <p>
+                    Some of the biggest frustrations were getting lost, losing friends, finding toilets and food, and keeping track of performances.
+                </p>
+            </div>
+        </div>
+        <img src="assets/pictures/blasol_mindmap.png" alt="blasol mindmap" class="blasol_mindmap">
+        <div class="discover_bottom">
+            <img src="assets/pictures/blasol_interview_guide.png" alt="blasol interview guide" class="blasol_interview_guide">
+            <div class="user_wants">
+                <h3>What users wanted</h3>
+                <ul>
+                    <li>An easy-to-use festival map</li>
+                    <li>A clear performance schedule</li>
+                    <li>A way to find friends</li>
+                    <li>Quick access to useful locations</li>
+                    <li>A way to plan their festival day</li>
+                </ul>
+                
+            </div>
+        </div>
+    </section>
+    <section class="define">
+        <img src="assets/pictures/discover_define_star.png" alt="blasol discover define star" class="discover_define_star">
+
+        <h2>DEFINE</h2>
+        <p>
+            Based on our research, we mapped out the main needs, pain points and user requirements to understand what the app should focus on. We used different mapping methods to organize our findings and turn them into a clearer direction for the project.
+            We then mapped out the app structure and user flow, defining the main features and how users would move between them. This helped us narrow the concept down to key features such as the interactive map, finding friends, lineup, personal schedule, profile and notifications.
+            The mapping process helped us keep the experience focused on the things that would be most useful during the festival, rather than trying to include too many features.
+        </p>
+        <img src="assets/pictures/blasol_persona.png" alt="blasol persona" class="blasol_persona">
+        <img src="assets/pictures/blasol_values.png" alt="blasol values" class="blasol_values">
+        <img src="assets/pictures/blasol_sitemap.png" alt="blasol sitemap" class="blasol_sitemap">
+        <img src="assets/pictures/define_single_star.png" alt="blasol define single star" class="blasol_define_single_star">
+    </section>
+    <section class="develop">
+        <h2>DEVELOP</h2>
+        <p>
+            Once we had the main features, we started exploring how the app could look and feel.
+        </p>
+        <img src="assets/pictures/develop_stars.png" alt="blasol develop stars" class="blasol_develop_stars">
+        <img src="assets/pictures/blasol_research1.png" alt="blasol research1" class="blasol_research1">
+        <img src="assets/pictures/blasol_reserach2.png" alt="blasol research2" class="blasol_research2">
+        <img src="assets/pictures/blasol_sketch1.png" alt="blasol sketch1" class="blasol_sketch1">
+        <img src="assets/pictures/blasol_lofi.png" alt="blasol lofi" class="blasol_lofi">
+        <img src="assets/pictures/blasol_sketch2.png" alt="blasol sketch2" class="blasol_sketch2">
+        <p>
+            The visual direction was inspired by 1970s aesthetics, paper cut-outs, hand-drawn elements and bright, slightly burnt colours. We wanted the interface to feel playful and energetic while still being easy to navigate.
+            We explored the direction through moodboards, style tiles, sketches and low-fidelity wireframes, gradually developing the structure of the main screens.
+        </p>
+        <img src="assets/pictures/Single_star_develop.png" alt="blasol single star develop" class="blasol_single_star_develop">
+    </section>
+    <section class="testinganditeration">
+        <h2>TESTING & ITERATION</h2>
+        <p>
+            We tested the prototype using a combination of a 5-second test and task-based scenarios.The scenarios included things like finding friends on the map, finding the nearest bar or café, checking the day's schedule and saving an artist. The testing showed that the overall visual direction was understood as fun, colourful, young and inviting, but also highlighted some areas where navigation and interactions could be clearer.
+        </p>
+        
+        <p>
+            Although we didn't make further changes within the project, the testing gave us some ideas for future development, particularly around making navigation and certain interactions clearer.
+        </p>
+        <img src="assets/pictures/testing an iteration stars.png" alt="testing and iteration stars" class="blasol_testing">
+    </section>
+    <section class="deliver">
+        <div class="deliver_content">
+            <div class="deliver_text">
+                <h2>DELIVER - FINAL SOLUTION</h2>
+                <p>
+                    The final concept is centred around the festival map, with quick access to friends, performances and useful locations.
+                </p>
+                <h3>The main features include:</h3>
+                <ul>
+                    <li>
+                        <strong>Map & Friends</strong>
+                        <span>Find friends and navigate around the festival grounds.</span>
+                    </li>
+                    <li>
+                        <strong>Lineup & My Schedule</strong>
+                        <span>Browse artists, save performances and create your own schedule.</span>
+                    </li>
+                    <li>
+                        <strong>Live Now</strong>
+                        <span>See what's happening and get quick information about artists without leaving the main screen.</span>
+                    </li>
+                    <li>
+                        <strong>My Ticket</strong>
+                        <span>Keep your ticket easily accessible within the app.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="video_crop">
+                <video class="blasol_video" src="assets/pictures/blasol_vid.mp4" autoplay muted loop playsinline></video>
+            </div>
+        </div>
+        <img src="assets/pictures/blasolscreenshots.png" alt="blasol screenshots" class="blasol_screenshots">
+        <p>
+            The final solution is a festival companion app designed to make BLÅ SOL easier to navigate while keeping the social side of the festival at its centre.
+            The combination of an interactive map, friend location, live information and personal scheduling gives users quick access to the things they need without requiring long interactions with their phone.
+            The result is an app that aims to make the festival feel less confusing and more connected, while still keeping the fun and energetic character of BLÅ SOL.
+        </p>
+        <img src="assets/pictures/blasol_Icon.png" alt="blasol icon" class="blasol_icon">
+        <img src="assets/pictures/Blasol_final.png" alt="blasol final" class="blasol_final">
+        <button class="prototype_button" type="button" onclick="window.location.href='https://www.figma.com/proto/Rgy1cmNPzWPqRyIHjLHsLQ/HIdden-places---EXAM-PROJECT?node-id=211-867&viewport=-11%2C-48%2C0.16&t=iqWiPqNtKMNZjREo-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=211%3A867&page-id=211%3A209'">VIEW PROTOTYPE</button>
+
+    </section>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const aarhusTime = new Intl.DateTimeFormat('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true,
+                timeZone: 'Europe/Copenhagen'
+            }).format(now);
+
+            document.getElementById('time').textContent = aarhusTime;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        const sparkleColors = ['#4B699F', '#7A6F9F', '#97B074', '#C96548', '#EBD792'];
+        document.addEventListener('mousemove', (e) => {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+
+            const randomX = (Math.random() - 0.5) * 100;
+            const randomY = (Math.random() - 0.5) * 100;
+            const randomColor = sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
+
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.setProperty('--tx', randomX + 'px');
+            sparkle.style.setProperty('--ty', randomY + 'px');
+            sparkle.style.width = '8px';
+            sparkle.style.height = '8px';
+            sparkle.style.backgroundColor = randomColor;
+            sparkle.style.borderRadius = '50%';
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => sparkle.remove(), 600);
+        });
+    </script>
+
+    <footer>
+        <span class="to_top_button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">BACK TO
+            THE TOP</span>
+        <div class="footer_left">
+            <span>follow</span>
+            <span class="footer_social" onclick="window.open('https://www.instagram.com/anniwayy.s/', '_blank')">INSTAGRAM</span>
+            <span class="footer_social" onclick="window.open('https://www.linkedin.com/in/anna-czochara-231b7b2a7/', '_blank')">LINKEDIN</span>
+        </div>
+        <div class="footer_right">
+            <span>contact</span>
+            <span class="footer_email" onclick="window.location.href='mailto:ann1a.czochara@gmail.com';">ann1a.czochara@gmail.com</span>
+        </div>
+        <span class="copyright">© 2026 <br> all rights reserved</span>
+    </footer>
 </body>
 </html>

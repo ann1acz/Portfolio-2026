@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="about.css">
     <title>About — Anna Czochara</title>
     <style>@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');</style>
+    <link rel="icon" href="assets/pictures/corner_logo.svg">
 </head>
 <body>
     <nav>
@@ -15,13 +16,18 @@
                 <span class="info-item"><span id="time">9:27 PM</span></span>
                 <span class="info-item">56.15327° N, 10.20250° E</span>
             </div>
-            <ul>
-                <li class="nav-item"><a href="landing_page.html">HOME</a></li>
-                <li class="nav-item"><a href="about_page.html">ABOUT</a></li>
-                <li class="nav-item"><a href="landing_page.html#projects">WORKS</a></li>
-                <li class="nav-item"><a href="gallery_page.html">GALLERY</a></li>
-                <li class="nav-item-2"><a href="#contact">LET'S CONNECT</a></li>
-            </ul>
+                <ul>
+                        <!--<li class="nav-item">• AARHUS, DK</li>
+                        <li class="nav-item"><span id="time">9:27 PM</span></li>
+                        <li class="nav-item">56.15327° N, 10.20250° E</li>-->
+                        <li class="nav-item"><a href="landing_page.html">HOME</a></li>
+                        <li class="nav-item"><a href="about_page.html">ABOUT</a></li>
+                        <!--<li class="nav-item"><a href="landing_page.html" onclick="window.scrollTo({ top: 1955, behavior: 'smooth' });">WORKS</a></li>-->
+                        <li class="nav-item"><a href="landing_page.html#scroll-1955">WORKS</a></li>
+
+                        <li class="nav-item"><a href="gallery_page.html">GALLERY</a></li>
+                        <li class="nav-item-2"><a href="mailto:ann1a.czochara@gmail.com">LET'S CONNECT</a></li>
+                </ul>
         </div>
     </nav>
 
@@ -86,8 +92,11 @@
 
     <div class="about_etsy">
         <p class="about_etsy_text">Outside of my design work, I run a little Etsy shop where I sell my own pixel art. What started as a creative side project has given me the chance to experiment with illustration, digital products and building something of my own.</p>
+        <img src="assets/pictures/etsy_1.png" alt="Etsy Cat Pixelart" class="etsy_img">
+        <img src="assets/pictures/etsy_2.png" alt="Etsy Strawberry Cake Pixelart" class="etsy_img">
+        <img src="assets/pictures/etsy_3.png" alt="Etsy Moon Pixelart" class="etsy_img">
     </div>
-
+</div>
     <div class="about_interests">
         <h2>THINGS THAT I ENJOY IN MY FREE TIME:</h2>
         <img src="assets/pictures/constellation.png" alt="Constelation" class="constelation">
@@ -108,21 +117,7 @@
             </div>
         </div>
     </div>
-
-    <footer id="contact">
-        <span class="to_top_button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">BACK TO
-            THE TOP</span>
-        <div class="footer_left">
-            <span>follow</span>
-            <span class="footer_social" onclick="window.open('https://www.instagram.com/annaczochara/', '_blank')">INSTAGRAM</span>
-            <span class="footer_social" onclick="window.open('https://www.linkedin.com/in/anna-czochara-1a0b3b1b9/', '_blank')">LINKEDIN</span>
-        </div>
-        <div class="footer_right">
-            <span>contact</span>
-            <span class="footer_email" onclick="window.location.href='mailto:example@example.com';">ann1a.czochara@gmail.com</span>
-        </div>
-        <span class="copyright">© 2026 <br> all rights reserved</span>
-    </footer>
+    </div>
 
     <script>
         function updateTime() {
@@ -151,5 +146,19 @@
             setTimeout(() => sparkle.remove(), 1000);
         });
     </script>
+    <footer id="contact">
+        <span class="to_top_button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">BACK TO
+            THE TOP</span>
+        <div class="footer_left">
+            <span>follow</span>
+            <span class="footer_social" onclick="window.open('https://www.instagram.com/anniwayy.s/', '_blank')">INSTAGRAM</span>
+            <span class="footer_social" onclick="window.open('https://www.linkedin.com/in/anna-czochara-231b7b2a7/', '_blank')">LINKEDIN</span>
+        </div>
+        <div class="footer_right">
+            <span>contact</span>
+            <span class="footer_email" onclick="window.location.href='mailto:ann1a.czochara@gmail.com';">ann1a.czochara@gmail.com</span>
+        </div>
+        <span class="copyright">© 2026 <br> all rights reserved</span>
+    </footer>
 </body>
 </html>

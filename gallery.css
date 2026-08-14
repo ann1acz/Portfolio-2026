@@ -8,9 +8,10 @@ body {
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 5430px;
+    height: 4430px;
     width: 100vw;
     overflow-x: hidden;
+    background-clip: border-box;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32"><text x="16" y="24" font-size="24" fill="white" stroke="%23202020" stroke-width="0.5" text-anchor="middle">✶</text></svg>') 16 16, auto;
 }
 
@@ -72,6 +73,10 @@ nav a {
     font-size: 16px;
 }
 
+nav a:hover {
+    color: #97B074;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -102,19 +107,19 @@ nav a {
 }
 
 .stars_gallery_page {
-    position: absolute;
-    top: 640px;
+    position: relative;
+    top: 480px;
     left: 70%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    size: 365px;
+    width: 365px;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
 .gallery_grid {
-    position: absolute;
-    top: 500px;
+    position: relative;
+    top: 160px;
     left: 0;
     right: 0;
     padding: 0 32px;
@@ -160,7 +165,7 @@ nav a {
 
 .stars_gallery_bottom {
     position: absolute;
-    bottom: 900px;
+    bottom: 420px;
     left: 42%;
     transform: translateX(-50%);
     z-index: 1;
@@ -169,7 +174,7 @@ nav a {
 
 .to_top_button {
     position: absolute;
-    bottom: 400px;
+    bottom: 340px;
     right: 50%;
     transform: translateX(50%);
     color: #fff;
@@ -181,19 +186,20 @@ nav a {
 
 footer {
     position: absolute;
-    bottom: 100px;
+    bottom: 0px;
     left: 0;
     right: 0;
-    background-color: #1f1f1f;
     padding: 40px 32px;
     box-sizing: border-box;
     color: #ffffff;
+    z-index: 10000;
+    background-color: #202020;
+    height: 470px;
 }
 
 .footer_left {
     position: absolute;
     bottom: 180px;
-    left: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -234,7 +240,9 @@ footer {
     font-size: 16px;
     text-align: right;
     text-transform: uppercase;
+    bottom: -340px;
     display: block;
+    position: relative;
 }
 
 .corner_logo {

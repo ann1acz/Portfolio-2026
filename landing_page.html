@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna Czochara</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/pictures/corner_logo.svg">
     <style>@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');</style>
 </head>
 <body>
@@ -21,9 +22,11 @@
                         <li class="nav-item">56.15327° N, 10.20250° E</li>-->
                         <li class="nav-item"><a href="landing_page.html">HOME</a></li>
                         <li class="nav-item"><a href="about_page.html">ABOUT</a></li>
-                        <li class="nav-item"><a href="#projects" onclick="window.scrollTo({ top: 1955, behavior: 'smooth' });">WORKS</a></li>
+                        <li class="nav-item"><a href="#scroll-1955" >WORKS</a></li>
+                        <!--<li class="nav-item"><a href="#" onclick="window.scrollTo({ top: 1955, behavior: 'smooth' });">WORKS</a></li>-->
+
                         <li class="nav-item"><a href="gallery_page.html">GALLERY</a></li>
-                        <li class="nav-item-2"><a href="mailto:ann1a.czochara@example.com">LET'S CONNECT</a></li>
+                        <li class="nav-item-2"><a href="mailto:ann1a.czochara@gmail.com">LET'S CONNECT</a></li>
                 </ul>
             </div>
         </nav>
@@ -58,11 +61,12 @@
                 <div class="project_card_bluefin" onclick="window.location.href='bluefin.html'">
                     <img src="assets/pictures/bluefin_card.png" alt="Project 1" class="project_image">
                     <h5 class="project_title">Bluefin</h5>
-                    <p class="project_description"></p>
+                    <p class="project_description">This case study is under construction! :)</p>
                 </div>
                 <div class="project_card_hiddenplaces" onclick="window.location.href='project2.html'">
                     <img src="assets/pictures/hiddenplaces_card.png" alt="Project 2" class="project_image">
                     <h5 class="project_title">Hidden Places</h5>
+                    <p class="project_description">This case study is under construction! :)</p>
                 </div>
             </div>
             <div class="project_card_blasol" onclick="window.location.href='blasol_page.html'">
@@ -97,6 +101,26 @@
             </div>
         </div>
     </div>
+    <script>
+        function handleHashScroll() {
+        if (window.location.hash.startsWith('#scroll-')) {
+            const topOffset = parseInt(window.location.hash.replace('#scroll-', ''), 10);
+            
+            if (!isNaN(topOffset)) {
+            window.scrollTo({
+                top: topOffset,
+                behavior: 'smooth'
+            });
+            }
+        }
+        }
+
+        // 1. Runs if you navigate from gallery.html (Page Load)
+        window.addEventListener('DOMContentLoaded', handleHashScroll);
+
+        // 2. Runs if you are already on aboutpage.html (Hash Change)
+        window.addEventListener('hashchange', handleHashScroll);
+    </script>
     <script>
         // Moon hover effect with dissolve
         const moonImage = document.querySelector('.moon-image');
@@ -164,12 +188,12 @@
             THE TOP</span>
         <div class="footer_left">
             <span>follow</span>
-            <span class="footer_social" onclick="window.open('https://www.instagram.com/annaczochara/', '_blank')">INSTAGRAM</span>
-            <span class="footer_social" onclick="window.open('https://www.linkedin.com/in/anna-czochara-1a0b3b1b9/', '_blank')">LINKEDIN</span>
+            <span class="footer_social" onclick="window.open('https://www.instagram.com/anniwayy.s/', '_blank')">INSTAGRAM</span>
+            <span class="footer_social" onclick="window.open('https://www.linkedin.com/in/anna-czochara-231b7b2a7/', '_blank')">LINKEDIN</span>
         </div>
         <div class="footer_right">
             <span>contact</span>
-            <span class="footer_email" onclick="window.location.href='mailto:example@example.com';">ann1a.czochara@gmail.com</span>
+            <span class="footer_email" onclick="window.location.href='mailto:ann1a.czochara@gmail.com';">ann1a.czochara@gmail.com</span>
         </div>
         <span class="copyright">© 2026 <br> all rights reserved</span>
     </footer>

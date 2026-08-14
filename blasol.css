@@ -1,4 +1,5 @@
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: helvetica neue, helvetica, sans-serif;
@@ -14,16 +15,15 @@ body {
 }
 
 #location-info {
-    position: fixed;
-    top: 20px;
-    left: 30px;
+    padding: 0px 32px;
+    display: flex;
+    gap: 40px;
     font-size: 16px;
     font-weight: normal;
     letter-spacing: 0.5px;
     z-index: 1000;
     color: #fff;
-    display: flex;
-    gap: 40px;
+    background-color: #202020;
 }
 
 .info-item {
@@ -32,21 +32,21 @@ body {
 
 nav {
     position: fixed;
-    top: 20px;
-    right: 30px;
-    width: auto;
-    display: flex;
-    align-items: center;
-    padding: 0;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     z-index: 1000;
     font-size: 16px;
+    box-sizing: border-box;
+    background-color: #202020;
+    padding: 20px 0;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 32px;
     gap: 30px;
 }
 
@@ -56,10 +56,91 @@ nav a {
     font-size: 16px;
 }
 
-.navbar {
-    
+nav a:hover {
+    color: #97B074;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #202020;
+}
+
+.nav-item {
+    color: #fff;
+}
+
+.to_top_button {
+    position: absolute;
+    bottom: 340px;
+    right: 50%;
+    transform: translateX(50%);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: #202020;
+    padding: 40px 32px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.footer_left {
+    position: absolute;
+    bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer_right {
+    position: absolute;
+    bottom: 230px;
+    right: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.footer_social, .footer_email {
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.footer_social:hover, .footer_email:hover {
+    color: #97B074;
+}
+
+.copyright {
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+    text-align: right;
+    text-transform: uppercase;
+    bottom: 0;
+    display: block;
+}
 .sparkle {
     position: fixed;
     pointer-events: none;
@@ -81,4 +162,684 @@ nav a {
         opacity: 0;
         transform: translate(var(--tx), var(--ty)) scale(0);
     }
+}
+
+.blasol_header {
+    position: relative;
+    height: 390px;
+    box-sizing: border-box;
+    padding: 80px 20px 34px;
+    color: #fff;
+    --header-offset: 160px;
+}
+
+.blasol_header_intro,
+.blasol_process,
+.blasol_header_meta {
+    transform: translateY(var(--header-offset));
+}
+
+.blasol_header_intro {
+    position: absolute;
+    left: 20px;
+    top: 120px;
+}
+
+.blasol_header_stars {
+    position: absolute;
+    left: 450px;
+    top: -150px;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.blasol_header_stars2 {
+    position: absolute;
+    left: 1550px;
+    top: 350px;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+
+}
+.challenge_star {
+    position: absolute;
+    left: 950px;
+    top: 1200px;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+.discover_define_star {
+    position: absolute;
+    left: 1050px;
+    top: -250px;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.blasol_define_single_star {
+    position: absolute;
+    left: 200px;
+    top: 1600px;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+
+}
+.blasol_develop_stars {
+    position: absolute;
+    left: 100px;
+    top: 450px;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+
+}
+.blasol_single_star_develop {
+    position: absolute;
+    left: 800px;
+    top: 2200px;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+.header_landing_1 {
+    font-size: 96px;
+    font-family: 'Boldonse', sans-serif;
+    color: #fff;
+    line-height: 0.95;
+    margin: 0 0 -40px;
+    transform: translateY(-80px);
+    position: relative;
+    z-index: 1;
+}
+
+.blasol_roles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    transform: translateY(0px);
+    position: relative;
+    z-index: 1;
+}
+
+.role_label,
+.meta_label {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'helvetica neue', sans-serif;
+}
+
+.role_pill {
+    border-radius: 999px;
+    padding: 5px 12px;
+    line-height: 1.15;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-1px);
+}
+
+.role_research {
+    background-color: #C96548;
+}
+
+.role_design {
+    background-color: #97B074;
+}
+
+.role_frontend {
+    background-color: #4B699F;
+}
+
+.blasol_process {
+    position: absolute;
+    right: 20px;
+    top: 198px;
+    margin: 0;
+    color: #a8a8a8;
+    font-size: 16px;
+    font-weight: 400;
+    transform: translateY(90px);
+}
+
+.blasol_header_meta {
+    font-family: 'helvetica neue', sans-serif;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 40px;
+    font-size: 20px;
+}
+
+.blasol_header_meta div {
+    display: flex;
+    flex-direction: column;
+}
+
+.Project_overview {
+    position: relative;
+    min-height: 650px;
+    box-sizing: border-box;
+    padding: 120px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 280px;
+    color: #202020;
+}
+
+.overview_phone {
+    width: 280px;
+    height: auto;
+    display: block;
+    transform: translateY(120px);
+}
+
+.overview_text {
+    max-width: 620px;
+    transform: translateY(90px);
+}
+
+.overview_text h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 24px;
+    color: #202020;
+}
+
+.overview_text p {
+    font-family: 'helvetica neue', sans-serif;
+    max-width: 540px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #202020;
+}
+
+.project_challenge {
+    max-width: 620px;
+    margin-left: 160px;
+    margin-top: 80px;
+    color: #202020;
+}
+
+.project_challenge h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 24px;
+    color: #202020;
+}
+
+.project_challenge p {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 0 18px;
+    color: #202020;
+}
+
+.design_process {
+    position: relative;
+    box-sizing: border-box;
+    padding: 160px 30px;
+  
+}
+
+.design_process h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 60px 0 24px;
+    color: #202020;
+
+}
+
+.process_visual {
+    position: relative;
+    margin-top: 80px;
+}
+
+.blasol_process_img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.process_labels {
+    position: absolute;
+    left: 1%;
+    right: 4%;
+    top: 62%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 42px;
+    pointer-events: none;
+}
+
+.process_labels span {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    padding-left: 42px;
+}
+
+.discover {
+    box-sizing: border-box;
+    padding: 180px 90px 160px;
+    color: #202020;
+}
+
+.discover_intro {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 90px;
+    align-items: start;
+    max-width: 1180px;
+    margin: 0 auto 110px;
+}
+
+.discover h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0;
+    color: #202020;
+    transform: translateY(14px);
+}
+
+.discover_text {
+    max-width: 820px;
+}
+
+.discover_text p {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.35;
+    margin: 0 0 18px;
+    color: #202020;
+}
+
+.blasol_mindmap {
+    width: 100%;
+    max-width: 1260px;
+    height: auto;
+    display: block;
+    margin: 0 auto 90px;
+}
+
+.discover_bottom {
+    display: grid;
+    grid-template-columns: minmax(420px, 620px) minmax(320px, 460px);
+    gap: 120px;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.blasol_interview_guide {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.user_wants {
+    font-family: 'helvetica neue', sans-serif;
+    color: #202020;
+    transform: translateY(-220px);
+}
+
+.user_wants h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 14px;
+}
+
+.user_wants ul {
+    margin: 0 0 28px 20px;
+    padding: 0;
+}
+
+.user_wants li {
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.user_wants p {
+    font-size: 16px;
+    line-height: 1.35;
+    margin: 0;
+    max-width: 420px;
+}
+
+.define {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 1900px;
+    padding: 170px 90px 160px;
+    color: #202020;
+}
+
+.define h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 42px;
+    color: #202020;
+}
+
+.define p {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.35;
+    max-width: 620px;
+    margin: 0;
+    color: #202020;
+}
+
+.blasol_persona {
+    position: absolute;
+    top: 120px;
+    right: 90px;
+    width: auto;
+    height: auto;
+}
+
+.blasol_values {
+    position: absolute;
+    left: 90px;
+    top: 750px;
+    width: auto;
+    height: auto;
+    z-index: 2;
+}
+
+.blasol_sitemap {
+    position: absolute;
+    right: 110px;
+    top: 1100px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+.develop {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 2400px;
+    padding: 220px 90px 180px;
+    color: #202020;
+}
+
+.develop h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 42px;
+    color: #202020;
+}
+
+.develop p {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.35;
+    max-width: 900px;
+    margin: 0;
+    color: #202020;
+}
+
+.develop > p:last-of-type {
+    position: absolute;
+    right: 260px;
+    top: 1800px;
+    max-width: 560px;
+}
+
+.blasol_research1 {
+    position: absolute;
+    left: 410px;
+    top: 380px;
+    width: auto;
+    height: auto;
+}
+
+.blasol_research2 {
+    position: absolute;
+    right: 1010px;
+    top: 744px;
+    width: auto;
+    height: auto;
+}
+
+.blasol_sketch1 {
+    position: absolute;
+    right: 210px;
+    top: 950px;
+    width: auto;
+    height: auto;
+}
+
+.blasol_lofi {
+    position: absolute;
+    left: 170px;
+    top: 1300px;
+    width: auto;
+    height: auto;
+}
+
+.blasol_sketch2 {
+    position: absolute;
+    right: 130px;
+    top: 1350px;
+    width: auto;
+    height: auto;
+}
+
+.testinganditeration {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 900px;
+    padding: 190px 90px 160px;
+    color: #202020;
+}
+
+.testinganditeration h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 42px;
+    color: #202020;
+}
+
+.testinganditeration p {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.35;
+    max-width: 1280px;
+    margin: 32;
+    color: #202020;
+}
+
+.blasol_testing {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-top: 90px;
+    margin-left: 900px;
+    margin-right: auto;
+}
+
+.deliver {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 2300px;
+    padding: 160px 90px 180px;
+    color: #202020;
+}
+
+.deliver_content {
+    display: grid;
+    grid-template-columns: minmax(420px, 620px) minmax(320px, 520px);
+    gap: 160px;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    transform: translateY(-210px);
+}
+
+.deliver h2 {
+    font-family: 'Boldonse', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 42px;
+    color: #202020;
+}
+
+.deliver p,
+.deliver h3,
+.deliver li,
+.deliver li span {
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.35;
+    color: #202020;
+}
+
+.deliver p {
+    margin: 0 0 48px;
+}
+
+.deliver h3 {
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.deliver ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.deliver li {
+    position: relative;
+    margin: 0 0 18px;
+    padding-left: 34px;
+}
+
+.deliver li strong,
+.deliver li span {
+    display: block;
+}
+
+.deliver li strong {
+    font-weight: 700;
+}
+
+.deliver li span {
+    max-width: 520px;
+    font-weight: 400;
+}
+
+.deliver li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #4B699F;
+}
+
+.video_crop {
+    width: 420px;
+    height: 760px;
+    max-width: 420px;
+    aspect-ratio: 474 / 872;
+    justify-self: end;
+    overflow: hidden;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    background: transparent;
+}
+
+.blasol_video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    background: transparent;
+    transform: none;
+}
+
+.deliver_text{
+    /*transform: translateY(-210px);*/
+}
+
+.blasol_screenshots {
+    display: block;
+    width: auto;
+    max-width: 1180px;
+    height: auto;
+    margin: -40px auto 190px;
+}
+
+.deliver > p {
+    max-width: 760px;
+    margin: 0 0 0 70px;
+}
+
+.blasol_icon {
+    position: absolute;
+    right: 210px;
+    top: 1500px;
+    width: auto;
+    height: auto;
+}
+
+.blasol_final {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 260px auto 42px;
+}
+
+.prototype_button {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 34px;
+    border: none;
+    border-radius: 999px;
+    background-color: #97B074;
+    color: #fff;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
 }

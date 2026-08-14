@@ -35,8 +35,6 @@ body {
 }
 .info-item {
  white-space: nowrap;
- 
- 
 
 }
 
@@ -136,6 +134,10 @@ body {
     color: #fff;
 }
 
+.nav-item-2{
+    color: #97B074;
+}
+
 nav {
     position: fixed;
     top: 0px;
@@ -164,6 +166,10 @@ nav a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+}
+
+nav a:hover {
+    color: #97B074;
 }
 
 .navbar {
@@ -217,12 +223,17 @@ nav a {
     background-color: #97B074;
     border: none;
     border-radius: 304px;
-    padding: 20px 34px;
+    padding: 16px 34px;
     cursor: pointer;
     position: absolute;
     top: 1520px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.about_button:hover {
+    background-color: #202020;
+    animation: dissolve 0.5s;
 }
 
 .stars_landing_about {
@@ -384,7 +395,6 @@ footer {
 .footer_left {
     position: absolute;
     bottom: 180px;
-    left: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

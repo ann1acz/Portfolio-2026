@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gallery.css">
     <title>Gallery</title>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');</style>
 </head>
 <body>
         <nav>
@@ -28,7 +29,45 @@
         </nav>
     <header>
         <h1 class="header_gallery">GALLERY</h1>
+        <h2 class="header_gallery_side">small projects <br>and fun experiments</h2>
+        <img src="assets/pictures/stars_gallery_page.png" alt="Stars" class="stars_gallery_page">
     </header>
+    <div class="gallery_grid">
+        <div class="gallery_col gallery_col_1">
+            <div class="gallery_item"><img src="assets/pictures/wygodnie_poster.png" alt=""><p>"WYGODNIE I ODPOWIEDZIALNE, CZYLI JAK?" POSTER DESIGN (ILLUSTRATOR)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/photography_photoshop.png" alt=""><p>PHOTOGRAPHY AND PHOTOSHOP EXPERIMENT (PHOTOSHOP)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/broadingmag.png" alt=""><p>BROADINGMAG INSPIRED ILLUSTRATION (FINELINERS, PROCREATE)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/stop_motion.gif" alt=""><p>STOP MOTION LEAF ANIMATIONS (TISSUE PAPER, AFTER EFFECTS)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/chess_piece.png" alt=""><p>GEOMETRICAL CHESS PIECE (ACRYLIC PAINT)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/text_image_composition.png" alt=""><p>TEXT AND IMAGE COMPOSITION PRACTICE (ILLUSTRATOR)</p></div>
+        </div>
+        <div class="gallery_col gallery_col_2">
+            <div class="gallery_item"><img src="assets/pictures/compozition.png" alt=""><p>COMPOSITION EXCERCISE (WATER COLOR, AE ILLUSTRATOR)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/variable_fonts_gif.gif" alt=""><p>VARIABLE FONT (PLASTICINE)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/violin.png" alt=""><p>"VIOLIN" ILLUSTRATION (PROCREATE)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/at_the_market.png" alt=""><p>"AT THE MARKET" LINOCUT PRINT (LINOLEUM)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/creative_portrait.png" alt=""><p>CREATIVE PORTRAIT PHOTOGRAPHY USING A PROJECTOR</p></div>
+            <div class="gallery_item"><img src="assets/pictures/detailed_linocut.png" alt=""><p>DETAILED IMAGE OF MY LINOCUT PRINT (LINOLEUM)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/concept_404.png" alt=""><p>CONCEPT 404 SCREEN DESIGN FOR A BUS COMPANY (ILLUSTRATOR)</p></div>
+        </div>
+        <div class="gallery_col gallery_col_3">
+            <div class="gallery_item"><img src="assets/pictures/landscape_painting.png" alt=""><p>LANDSCAPE PAINTING PRACTICE (ACRYLIC PAINT)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/fantasy_river.png" alt=""><p>FANTASY RIVER ILLUSTRATION (PROCREATE)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/still_life.png" alt=""><p>STILL LIFE PAINTING PRACTICE (WATERCOLOR)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/ridge_illustration.png" alt=""><p>"RIDGE" ILLUSTRATION (PROCREATE)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/signpainting.gif" alt=""><p>SIGNPAINTING (CLEAR ACRYLIC SHEET, ACRYLIC PAINT)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/laundry_time.png" alt=""><p>"LAUNDRY TIME" LINOCUT PRINT (LINOLEUM)</p></div>
+        </div>
+        <div class="gallery_col gallery_col_4">
+            <div class="gallery_item"><img src="assets/pictures/pixel_glass.png" alt=""><p>PIXEL ART PRACTICE (ASEPRITE)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/ac.png" alt=""><p>INITIALS CALIGRAPHY (PARALLEL PEN)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/souvenir_signboard.gif" alt=""><p>SOUVENIR STORE SIGNBOARD (BLACK ACRYLIC SHEET, WOOD, LASER CUTTER, GOLD ACRYLIC PAINT)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/wazne_poster.png" alt=""><p>AIRLINE POSTER CONCEPT (PROCREATE, AE ILLUSTRATOR)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/redpower.png" alt=""><p>REDPOWER - CAMPAIGN POSTER CONCEPT (RED INK, ILLUSTRATOR)</p></div>
+            <div class="gallery_item"><img src="assets/pictures/photography_experiment.png" alt=""><p>PHOTOGRAPHY EXPERIMENT</p></div>
+        </div>
+    </div>
+    <img src="assets/pictures/stars_gallery_bottom.png" alt="Stars" class="stars_gallery_bottom">
     <footer>
         <span class="to_top_button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">BACK TO
             THE TOP</span>
@@ -39,9 +78,37 @@
         </div>
         <div class="footer_right">
             <span>contact</span>
-            <span class="footer_email" onclick="window.location.href='mailto:example@example.com';">ann1a.czochara@gmail.com</span>
+            <span class="footer_email" onclick="window.location.href='mailto:ann1a.czochara@gmail.com';">ann1a.czochara@gmail.com</span>
         </div>
         <span class="copyright">© 2026 <br> all rights reserved</span>
     </footer>
+
+    <script>
+        function updateTime() {
+            document.getElementById('time').textContent = new Intl.DateTimeFormat('en-US', {
+                hour: 'numeric', minute: '2-digit', second: '2-digit',
+                hour12: true, timeZone: 'Europe/Copenhagen'
+            }).format(new Date());
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        const sparkleColors = ['#4B699F', '#7A6F9F', '#97B074', '#C96548', '#EBD792'];
+        document.addEventListener('mousemove', (e) => {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            const randomColor = sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.setProperty('--tx', (Math.random() - 0.5) * 100 + 'px');
+            sparkle.style.setProperty('--ty', (Math.random() - 0.5) * 100 + 'px');
+            sparkle.style.width = '8px';
+            sparkle.style.height = '8px';
+            sparkle.style.backgroundColor = randomColor;
+            sparkle.style.borderRadius = '50%';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 600);
+        });
+    </script>
 </body>
 </html>

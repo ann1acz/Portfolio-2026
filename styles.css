@@ -360,7 +360,7 @@ nav a {
 
 .to_top_button {
     position: absolute;
-    bottom: 360px;
+    bottom: 340px;
     right: 50%;
     transform: translateX(50%);
     color: #fff;
@@ -383,23 +383,25 @@ footer {
 
 .footer_left {
     position: absolute;
-    bottom: 200px;
+    bottom: 180px;
     left: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 .footer_right {
     position: absolute;
-    bottom: 200px;
+    bottom: 230px;
     right: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 20px;
+    text-transform: uppercase;
 }
 
 .footer_social, .footer_email {

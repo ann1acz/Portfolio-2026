@@ -1,0 +1,5 @@
+hidden places:
+- add stars
+- add link to prototype
+- change h2 line height
+- check font sizes

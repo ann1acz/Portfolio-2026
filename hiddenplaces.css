@@ -199,7 +199,7 @@ footer {
 .challenge_star {
     position: absolute;
     top: 100px;
-    right: 180%;
+    left: -80%;
     width: auto;
     pointer-events: none;
     z-index: 0;
@@ -225,16 +225,17 @@ footer {
     z-index: 0;
 
 }
-.blasol_develop_stars {
+.hp_develop_stars {
     position: absolute;
-    left: 6.944%;
-    top: 450px;
+    top: 1800px;
+    right: 18%;
     width: auto;
     height: auto;
     pointer-events: none;
     z-index: 0;
 
 }
+
 .blasol_single_star_develop {
     position: absolute;
     left: 55.556%;
@@ -494,6 +495,18 @@ footer {
     color: #202020;
 }
 
+.hiddenplaces_discover_stars {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    position: absolute;
+    top: 1100px;
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
 
 .user_wants {
     font-family: 'helvetica neue', sans-serif;
@@ -569,6 +582,17 @@ footer {
     z-index: 2;
 }
 
+.hiddenplaces_values_star {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    position: absolute;
+    top: 1800px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
 .develop {
     position: relative;
     box-sizing: border-box;
@@ -610,6 +634,11 @@ footer {
     color: #202020;
 }
 
+.testinganditeration_text {
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
 .testinganditeration h2 {
     font-family: 'Boldonse', sans-serif;
     font-size: 48px;
@@ -627,6 +656,17 @@ footer {
     color: #202020;
 }
 
+.hiddenplaces_testing_stars {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    position: absolute;
+    top: 100px;
+    right: 6%;
+    z-index: 1;
+}
+
 .blasol_testing {
     display: block;
     width: auto;
@@ -640,7 +680,7 @@ footer {
     position: relative;
     box-sizing: border-box;
     min-height: 2300px;
-    padding: 0px 90px 180px;
+    padding: 0px 20px 180px;
     color: #202020;
 }
 
@@ -650,7 +690,7 @@ footer {
     align-items: center;
     max-width: 1280px;
     margin: 0 auto;
-    transform: translateY(-120px);
+    transform: translateY(-70px);
 }
 
 .deliver_content h2 {
@@ -661,13 +701,18 @@ footer {
     color: #202020;
 }
 
+.deliver_text {
+    display: flex;
+    flex-direction: column;
+}
+
 .deliver p,
 .deliver h3,
 .deliver li,
 .deliver li span {
     font-family: 'helvetica neue', sans-serif;
     font-size: 20px;
-    line-height: 1.35;
+    line-height: 1.23;
     color: #202020;
 }
 
@@ -773,7 +818,8 @@ footer {
 
 .prototype_button {
     display: block;
-    margin: 0 auto;
+    width: fit-content;
+    margin: 0 0 0 auto;
     padding: 16px 34px;
     border: none;
     border-radius: 999px;
@@ -826,7 +872,6 @@ footer {
 .testinganditeration h2,
 .deliver h2 {
     font-size: 48px;
-    line-height: 1;
     padding-bottom: 20px;
 }
 
@@ -1020,7 +1065,7 @@ footer {
 }
 
 .deliver_content {
-    transform: none;
+    transform: translateY(-70px);
     grid-template-columns: minmax(420px, 620px) minmax(320px, 520px);
     gap: 120px;
 }

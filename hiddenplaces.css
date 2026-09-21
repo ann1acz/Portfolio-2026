@@ -1117,10 +1117,16 @@ footer {
 }
 
 @media (max-width: 800px) {
+    html {
+        overflow-x: hidden;
+    }
+
     body {
         height: auto;
-        min-height: auto;
-        background-size: cover;
+        overflow-x: hidden;
+        background-image: url('assets/pictures/hiddenplaces_background_mobile.png');
+        background-position: center top;
+        background-size: auto;
     }
 
     .navbar {
@@ -1405,7 +1411,7 @@ footer {
 
 
     .process_visual {
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
     .process_labels {

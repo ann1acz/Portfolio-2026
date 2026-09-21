@@ -495,7 +495,9 @@ footer {
 @media (max-width: 800px) {
     body {
         height: auto;
-        background-size: cover;
+        background-image: url('assets/pictures/about_background_mobile.png');
+        background-position: center top;
+        background-size: auto;
     }
 
     .navbar {
@@ -589,8 +591,11 @@ footer {
         width: auto;
     }
 
+    .about_hey {
+        color: #202020;
+    }
     .about_hey_name {
-        color: #97B074;
+        color: #202020;
     }
 
     .about_skills {

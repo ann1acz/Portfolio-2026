@@ -882,9 +882,11 @@ footer {
 @media (max-width: 800px) {
     body {
         height: auto;
-        min-height: auto;
-        background-size: cover;
+        background-image: url('assets/pictures/blasol_background_mobile.png');
+        background-position: center top;
+        background-size: auto;
     }
+
 
     .navbar {
         flex-wrap: wrap;

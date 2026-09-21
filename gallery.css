@@ -348,7 +348,9 @@ footer {
 @media (max-width: 800px) {
     body {
         height: auto;
-        background-size: cover;
+        background-image: url('assets/pictures/gallery_background_mobile.png');
+        background-position: center top;
+        background-size: auto;
     }
 
     .navbar {

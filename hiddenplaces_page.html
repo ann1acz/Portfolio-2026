@@ -16,7 +16,12 @@
                 <span class="info-item"><span id="time">9:27 PM</span></span>
                 <span class="info-item">56.15327° N, 10.20250° E</span>
             </div>
-                <ul>
+                <button class="nav_burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-list">
                         <!--<li class="nav-item">• AARHUS, DK</li>
                         <li class="nav-item"><span id="time">9:27 PM</span></li>
                         <li class="nav-item">56.15327° N, 10.20250° E</li>-->
@@ -192,6 +197,21 @@
 
         updateTime();
         setInterval(updateTime, 1000);
+
+        const navBurger = document.getElementById('nav-burger');
+        const navList = document.getElementById('nav-list');
+        navBurger.addEventListener('click', () => {
+            const isOpen = navList.classList.toggle('nav-open');
+            navBurger.classList.toggle('active', isOpen);
+            navBurger.setAttribute('aria-expanded', isOpen);
+        });
+        navList.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('nav-open');
+                navBurger.classList.remove('active');
+                navBurger.setAttribute('aria-expanded', 'false');
+            });
+        });
 
         const sparkleColors = ['#4B699F', '#7A6F9F', '#97B074', '#C96548', '#EBD792'];
         document.addEventListener('mousemove', (e) => {

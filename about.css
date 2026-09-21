@@ -47,6 +47,41 @@ nav {
     background-color: #202020;
 }
 
+.nav_burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 16px;
+    z-index: 1100;
+}
+
+.nav_burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav_burger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav_burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav_burger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -455,4 +490,209 @@ footer {
 @keyframes sparkleAnimation {
     0% { opacity: 1; transform: translate(0, 0) scale(1); }
     100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0); }
+}
+
+@media (max-width: 800px) {
+    body {
+        height: auto;
+        background-size: cover;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    #location-info {
+        padding: 0 16px;
+        gap: 16px;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        padding: 14px 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 16px;
+        gap: 20px;
+        background-color: #fff;
+    }
+
+    nav ul.nav-open {
+        display: flex;
+    }
+
+    .nav_burger {
+        display: flex;
+        margin-left: auto;
+        margin-right: 16px;
+    }
+
+    nav ul a, .nav-item-2 a {
+        color: #202020;
+        font-size: 16px;
+    }
+
+    .header_about {
+        padding: 120px 16px 40px;
+    }
+
+    .header_about_title {
+        position: static;
+        top: auto;
+        left: auto;
+        font-size: 44px;
+    }
+
+    .header_about_tags {
+        position: relative;
+        top: auto;
+        right: auto;
+        text-align: left;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    .stars_header_about {
+        display: none;
+    }
+
+    .about_intro {
+        flex-direction: column;
+        padding: 40px 16px;
+        top: 0;
+        gap: 24px;
+    }
+
+    .about_intro_img {
+        width: 100%;
+        height: auto;
+        left: 0;
+        margin-bottom: 30px;
+    }
+
+    .about_intro_text {
+        left: 0;
+    }
+
+    .about_intro_text p {
+        width: auto;
+    }
+
+    .about_hey_name {
+        color: #97B074;
+    }
+
+    .about_skills {
+        flex-direction: column;
+        padding: 20px 16px;
+        top: 0;
+        left: 0;
+        gap: 40px;
+    }
+
+    .about_etsy {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 16px;
+        left: 0;
+        top: 0;
+        gap: 20px;
+    }
+
+    .about_etsy_text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .etsy_img {
+        width: 80px;
+        height: auto;
+
+    }
+
+    .about_interests {
+        padding: 40px 16px;
+        left: 0;
+        top: 0;
+    }
+
+    .constelation {
+        left: 50%;
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .about_awards {
+        padding: 40px 16px;
+        left: 0;
+        transform: none;
+    }
+
+    .about_awards h2 {
+        font-size: 48px;
+    }
+
+    .award_item {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .award_image {
+        width: 100%;
+    }
+
+    .award_subtitle {
+        left: 0;
+        top: 0;
+    }
+
+    .award_content p {
+        max-width: 100%;
+    }
+
+    .to_top_button {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        display: block;
+        text-align: center;
+        margin: 30px auto 0;
+    }
+
+    footer {
+        position: relative;
+        height: auto;
+        padding: 40px 16px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_left,
+    .footer_right {
+        position: static;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer_social, .footer_email {
+        font-size: 20px;
+    }
+
+    .copyright {
+        text-align: left;
+        bottom: auto;
+    }
 }

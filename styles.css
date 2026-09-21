@@ -49,6 +49,10 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+.moon_wrapper {
+    display: contents;
+}
+
 .moon-image.dissolve {
     opacity: 0;
 }
@@ -111,6 +115,10 @@ body {
     margin-top: 545px;
     margin-left: 610px;
     position: absolute;
+}
+
+.header_title_row {
+    display: contents;
 }
 
 .header_landing_3 {
@@ -179,6 +187,41 @@ nav a:hover {
     width: 100%;
     background-color: #202020;
     
+}
+
+.nav_burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 16px;
+    z-index: 1100;
+}
+
+.nav_burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav_burger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav_burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav_burger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .scroll_star {
@@ -446,6 +489,10 @@ footer {
     z-index: 1000;
 }
 
+.project_image {
+    border: 2px solid #000000;
+}
+
 @keyframes carousel-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -471,5 +518,265 @@ footer {
     100% {
         opacity: 0;
         transform: translate(var(--tx), var(--ty)) scale(0);
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        height: auto;
+        background-size: cover;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    #location-info {
+        padding: 0 16px;
+        gap: 16px;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        padding: 14px 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 16px;
+        gap: 20px;
+        background-color: #fff;
+    }
+
+    nav ul.nav-open {
+        display: flex;
+    }
+
+    .nav_burger {
+        display: flex;
+        margin-left: auto;
+        margin-right: 16px;
+    }
+
+    nav ul a, .nav-item-2 a {
+        color: #202020;
+        font-size: 16px;
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 120px 16px 40px;
+        gap: 16px;
+    }
+
+    .header_landing_3 {
+        position: relative;
+        top: -30px;
+        right: auto;
+        order: 0;
+        margin: 0;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .moon_wrapper {
+        display: block;
+        position: relative;
+        order: 1;
+        width: 180px;
+        height: 140px;
+        margin: 0 auto;
+    }
+
+    .moon-image {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 180px;
+        z-index: 1;
+    }
+
+    .moon-circle {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140px;
+        height: 180px;
+        margin-top: 0;
+    }
+
+    .header_title_row {
+        display: flex;
+        order: 2;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        gap: 0;
+        width: 100%;
+    }
+
+    .header_landing_1,
+    .header_landing_2 {
+        position: static;
+        font-size: 36px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .header_landing_2 {
+        margin-left: -10px;
+    }
+
+    .eyebrow {
+        position: static;
+        order: 3;
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .header_side {
+        position: static;
+        order: 4;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .scroll_star,
+    .scroll_text {
+        display: none;
+    }
+
+    .corner_logo {
+        top: 58px;
+        left: 16px;
+        width: 32px;
+        height: auto;
+    }
+
+    .stars_landing_about {
+        position: static;
+        transform: none;
+        display: block;
+        width: 100px;
+        margin: 60px auto 0;
+    }
+
+    .landing_about {
+        position: static;
+        transform: none;
+        width: auto;
+        margin: 20px 10px 0;
+        font-size: 20px;
+        margin: 20px 10px 0;
+    }
+
+    .about_button {
+        position: static;
+        transform: none;
+        display: block;
+        margin: 24px auto 0;
+    }
+
+    .landing_projects {
+        position: static;
+        padding: 0 16px;
+        margin: 80px 10px 0;
+    }
+
+    .landing_projects_text {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .project_cards_top_row {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .project_card_hiddenplaces,
+    .project_card_bluefin,
+    .project_card_blasol {
+        height: auto;
+    }
+
+    .project_description {
+        font-size: 16px;
+    }
+
+    .project_image,
+    .project_image_blasol {
+        height: 220px;
+        width: 380px;
+    }
+
+    .landing_gallery {
+        position: static;
+        margin-top: 60px;
+        padding: 0 16px;
+        margin-bottom: 100px;
+    }
+
+    .landing_gallery_text {
+        font-size: 36px;
+    }
+
+    .gallery_star {
+        display: none;
+    }
+
+    .gallery_image {
+        height: 220px;
+    }
+
+    .to_top_button {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        display: block;
+        text-align: center;
+        margin: 30px auto 0;
+    }
+
+    footer {
+        position: relative;
+        height: auto;
+        padding: 40px 16px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_left,
+    .footer_right {
+        position: static;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer_social, .footer_email {
+        font-size: 20px;
+    }
+
+    .copyright {
+        text-align: left;
+        bottom: auto;
     }
 }

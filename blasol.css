@@ -68,6 +68,41 @@ nav a:hover {
     background-color: #202020;
 }
 
+.nav_burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 16px;
+    z-index: 1100;
+}
+
+.nav_burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav_burger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav_burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav_burger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 .nav-item {
     color: #fff;
 }
@@ -842,4 +877,230 @@ footer {
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    body {
+        height: auto;
+        background-size: cover;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    #location-info {
+        padding: 0 16px;
+        gap: 16px;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        padding: 14px 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px 16px;
+        gap: 20px;
+        background-color: #fff;
+    }
+
+    nav ul.nav-open {
+        display: flex;
+    }
+
+    .nav_burger {
+        display: flex;
+        margin-left: auto;
+        margin-right: 16px;
+    }
+
+    nav ul a, .nav-item-2 a {
+        color: #202020;
+        font-size: 16px;
+    }
+
+    .blasol_header_stars,
+    .blasol_header_stars2 {
+        display: none !important;
+    }
+
+    .blasol_header {
+        height: auto;
+        display: block;
+        padding: 120px 20px 30px;
+        --header-offset: 0px;
+    }
+
+    .header_landing_1 {
+        font-size: 44px !important;
+        margin: 0 0 16px !important;
+    }
+
+    .blasol_roles {
+        flex-wrap: wrap;
+    }
+
+    .blasol_header_meta {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .blasol_header *,
+    .Project_overview *,
+    .project_challenge *,
+    .design_process *,
+    .discover *,
+    .define *,
+    .develop *,
+    .testinganditeration *,
+    .deliver * {
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        width: auto !important;
+        max-width: 100% !important;
+    }
+
+    .Project_overview,
+    .project_challenge,
+    .design_process,
+    .discover,
+    .define,
+    .develop,
+    .testinganditeration,
+    .deliver {
+        display: block !important;
+        min-height: auto !important;
+        height: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 60px 20px !important;
+    }
+
+    .Project_overview img,
+    .project_challenge img,
+    .design_process img,
+    .discover img,
+    .define img,
+    .develop img,
+    .testinganditeration img,
+    .deliver img {
+        display: block !important;
+        height: auto !important;
+        margin: 20px auto !important;
+    }
+
+    img.challenge_star,
+    img.discover_define_star,
+    img.blasol_define_single_star,
+    img.blasol_develop_stars,
+    img.blasol_single_star_develop,
+    img.blasol_icon {
+        display: none !important;
+    }
+
+    .overview_text h2,
+    .project_challenge h2,
+    .design_process h2,
+    .discover h2,
+    .define h2,
+    .develop h2,
+    .testinganditeration h2,
+    .deliver h2 {
+        font-size: 36px !important;
+        line-height: 1.15 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .discover_intro,
+    .discover_bottom,
+    .deliver_content {
+        display: block;
+    }
+
+    .discover_intro > *,
+    .discover_bottom > *,
+    .deliver_content > * {
+        margin-bottom: 32px;
+    }
+
+    .process_labels {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .process_labels span {
+        font-size: 16px;
+        padding-left: 0;
+        color: #202020;
+    }
+
+    .video_crop {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .deliver > p {
+        margin: 0 0 24px;
+        max-width: 100%;
+    }
+
+    .blasol_screenshots,
+    .blasol_final {
+        margin: 40px auto;
+        max-width: 100%;
+    }
+
+    .to_top_button {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        display: block;
+        text-align: center;
+        margin: 30px auto 0;
+    }
+
+    footer {
+        position: relative;
+        height: auto;
+        padding: 40px 16px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_left,
+    .footer_right {
+        position: static;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .footer_social, .footer_email {
+        font-size: 20px;
+    }
+
+    .copyright {
+        text-align: left;
+        bottom: auto;
+    }
 }

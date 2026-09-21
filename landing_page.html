@@ -16,7 +16,12 @@
                     <span class="info-item"><span id="time">9:27 PM</span></span>
                     <span class="info-item">56.15327° N, 10.20250° E</span>
                 </div>
-                <ul>
+                <button class="nav_burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-list">
                         <!--<li class="nav-item">• AARHUS, DK</li>
                         <li class="nav-item"><span id="time">9:27 PM</span></li>
                         <li class="nav-item">56.15327° N, 10.20250° E</li>-->
@@ -32,15 +37,19 @@
         </nav>
     <header>
         <h3 class="header_landing_3">A UNIVERSE OF THOUGHTFUL DESIGN</h3>
-        <img src="assets/pictures/moon_1.png" alt="Moon" class="moon-image">
-        <div class="moon-circle"></div>
+        <div class="moon_wrapper">
+            <img src="assets/pictures/moon_1.png" alt="Moon" class="moon-image">
+            <div class="moon-circle"></div>
+        </div>
         <div class="eyebrow"> 
             <h2 class="header_eyebrow">UI/UX DESIGN</h2>
             <h2 class="header_eyebrow">ILLUSTRATION</h2>
             <h2 class="header_eyebrow">GRAPHIC DESIGN</h2>
         </div>
-            <h1 class="header_landing_1">ANNA CZO</h1>
-            <h1 class="header_landing_2">CHARA</h1>
+            <div class="header_title_row">
+                <h1 class="header_landing_1">ANNA CZO</h1>
+                <h1 class="header_landing_2">CHARA</h1>
+            </div>
             <h2 class="header_side">CREATIVE PORTFOLIO</h2>
     </header>
 
@@ -157,6 +166,21 @@
         
         // Update every second
         setInterval(updateTime, 1000);
+
+        const navBurger = document.getElementById('nav-burger');
+        const navList = document.getElementById('nav-list');
+        navBurger.addEventListener('click', () => {
+            const isOpen = navList.classList.toggle('nav-open');
+            navBurger.classList.toggle('active', isOpen);
+            navBurger.setAttribute('aria-expanded', isOpen);
+        });
+        navList.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('nav-open');
+                navBurger.classList.remove('active');
+                navBurger.setAttribute('aria-expanded', 'false');
+            });
+        });
         
         // Sparkle cursor effect
         const sparkleColors = ['#4B699F', '#7A6F9F', '#97B074', '#C96548', '#EBD792'];

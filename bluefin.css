@@ -1307,6 +1307,7 @@ footer {
 
     nav ul.nav-open {
         display: flex;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
     }
 
     .nav_burger {
@@ -1427,6 +1428,19 @@ footer {
         font-size: 36px !important;
         line-height: 1.15 !important;
         padding-bottom: 0 !important;
+        line-height: 1.4 !important;
+        text-align: left !important;
+    }
+
+    .Project_overview p,
+    .project_challenge p,
+    .design_process p,
+    .discover p,
+    .define p,
+    .develop p,
+    .testinganditeration p,
+    .deliver p {
+        text-align: left !important;
     }
 
     .to_top_button {
@@ -1528,12 +1542,40 @@ footer {
         transform: translateX(-50%);
     }
 
-    .overview_mockup {
+    .overview_images {
+        width: calc(100% + 40px) !important;
+        margin-left: 0px !important;
+        margin-right: -10px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .discover_images {
+        width: calc(100% + 40px) !important;
+        max-width: none !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        transform: none !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .bluefin_interior {
+        display: block;
+        width: 100% !important;
+        max-width: 480px !important;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bluefin_mockup_overview {
         position: static;
         transform: none;
         margin-left: auto;
         margin-right: auto;
-        width: 580px;
+        width: 100% !important;
+        max-width: 480px !important;
         height: auto;
     }
 
@@ -1551,5 +1593,9 @@ footer {
 
     .process_visual {
         overflow-x: auto;
+    }
+
+    .process_labels {
+        display: none;
     }
 }

@@ -882,6 +882,7 @@ footer {
 @media (max-width: 800px) {
     body {
         height: auto;
+        min-height: auto;
         background-size: cover;
     }
 
@@ -916,6 +917,7 @@ footer {
 
     nav ul.nav-open {
         display: flex;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
     }
 
     .nav_burger {
@@ -948,12 +950,20 @@ footer {
 
     .blasol_roles {
         flex-wrap: wrap;
+        font-size: 12px !important;
+        font-weight: 400 !important;
     }
 
     .blasol_header_meta {
         display: flex !important;
         flex-direction: column;
-        gap: 12px;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .blasol_process {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .blasol_header *,
@@ -1022,8 +1032,21 @@ footer {
     .testinganditeration h2,
     .deliver h2 {
         font-size: 36px !important;
-        line-height: 1.15 !important;
+        line-height: 1.4 !important;
         padding-bottom: 0 !important;
+        margin-bottom: 32px !important;
+        text-align: left !important;
+    }
+
+    .Project_overview p,
+    .project_challenge p,
+    .design_process p,
+    .discover p,
+    .define p,
+    .develop p,
+    .testinganditeration p,
+    .deliver p {
+        text-align: left !important;
     }
 
     .discover_intro,
@@ -1039,16 +1062,11 @@ footer {
     }
 
     .process_labels {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        margin-top: 16px;
+        display: none;
     }
 
-    .process_labels span {
-        font-size: 16px;
-        padding-left: 0;
-        color: #202020;
+    .overview_phone {
+        margin: 20px auto 32px !important;
     }
 
     .video_crop {

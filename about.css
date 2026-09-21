@@ -529,6 +529,7 @@ footer {
 
     nav ul.nav-open {
         display: flex;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
     }
 
     .nav_burger {

@@ -1154,6 +1154,7 @@ footer {
 
     nav ul.nav-open {
         display: flex;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
     }
 
     .nav_burger {
@@ -1185,12 +1186,20 @@ footer {
 
     .blasol_roles {
         flex-wrap: wrap;
+        font-size: 12px !important;
+        font-weight: 400 !important;
     }
 
     .blasol_header_meta {
         display: flex !important;
         flex-direction: column;
-        gap: 12px;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .blasol_process {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     .blasol_header *,
@@ -1239,6 +1248,8 @@ footer {
         display: block !important;
         height: auto !important;
         margin: 20px auto !important;
+        width: 100% !important;
+        max-width: 400px !important;
     }
 
     img.challenge_star,
@@ -1261,8 +1272,21 @@ footer {
     .testinganditeration h2,
     .deliver h2 {
         font-size: 36px !important;
-        line-height: 1.15 !important;
+        line-height: 1.4 !important;
         padding-bottom: 0 !important;
+        margin-bottom: 32px !important;
+        text-align: left !important;
+    }
+
+    .Project_overview p,
+    .project_challenge p,
+    .design_process p,
+    .discover p,
+    .define p,
+    .develop p,
+    .testinganditeration p,
+    .deliver p {
+        text-align: left !important;
     }
 
     .to_top_button {
@@ -1341,14 +1365,24 @@ footer {
 
     .overview_images,
     .discover_images {
-        width: max-content;
+        width: 100%;
         max-width: none;
-        margin-left: 50%;
-        margin-right: 0;
-        transform: translateX(-50%);
+        margin-left: auto !important;
+        margin-right: auto !important;
+        transform: none;
     }
 
-    .overview_mockup,
+    .overview_mockup {
+        position: static;
+        top: auto;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
     .hiddenplaces_cat_overview,
     .hiddenplaces_mindmap{
         position: static;
@@ -1372,5 +1406,9 @@ footer {
 
     .process_visual {
         overflow-x: auto;
+    }
+
+    .process_labels {
+        display: none;
     }
 }
